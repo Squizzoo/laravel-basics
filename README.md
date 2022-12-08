@@ -9,7 +9,7 @@ Voer uit volgende commands:
 - npm run build
 - php artisan serve
 
-Website maakt standaard gebuik van de dababase met naam "laravel". <br />
+Website maakt standaard gebuik van de database met naam "laravel". <br />
 Om database te vullen met mock data voer volgende commands uit:
 - php artisan migrate
 - php artisan db:seed --class=UserSeeder
