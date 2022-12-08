@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 //Controllers
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\JsonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
 Route::get('/', function () {
     return view('/home');
 });
@@ -25,5 +27,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/json', [JsonController::class, 'index'])->name("json");
+Route::get('/json/create', [JsonController::class, 'create'])->name("json.create");
+
+Route::post('/json', [JsonController::class, 'saveJson'])->name("json.saveJson");
 
 Route::resource('/users', UserController::class);
+
