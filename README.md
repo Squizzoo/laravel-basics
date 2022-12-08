@@ -5,6 +5,7 @@ Om te gebruiken heb je volgende software nodig:
 - npm
 
 Voer uit volgende commands:
+- composer install
 - npm install
 - npm run build
 - php artisan serve
